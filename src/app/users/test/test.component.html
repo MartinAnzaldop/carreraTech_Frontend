@@ -1,0 +1,307 @@
+<app-navbar-user></app-navbar-user>
+<div class="container">
+  <div>
+    <h1 class="text-center mt-4">
+      <strong
+        >Descubre Tu Dominio en la Programación</strong
+      >
+    </h1>
+    <div>
+      <p>
+        <strong>Objetivo:</strong> El objetivo de este test es evaluar y medir
+        el nivel de habilidades en programación de un individuo. A través de una
+        serie de preguntas que abarcan diferentes aspectos de la programación,
+        desde conceptos fundamentales hasta aplicaciones prácticas, se busca
+        proporcionar una visión integral de las habilidades y conocimientos del
+        participante en el campo de la programación de software.
+      </p>
+      <div>
+        <form [formGroup]="testForm" (ngSubmit)="agregarTest()">
+          <label for="nombreCompleto">Nombre Completo: *</label>
+          <input
+            type="text"
+            formControlName="nombre"
+            class="form-control"
+            id="nombreCompleto"
+            maxlength="128"
+            style="width: 300px"
+            placeholder="Ingrese su nombre"
+            required
+          />
+          <label class="mt-3" for="nombreCompleto">Edad: *</label>
+          <input
+            type="number"
+            formControlName="edad"
+
+            class="form-control"
+            id="nombreCompleto"
+            maxlength="128"
+            style="width: 300px"
+            placeholder="Ingrese su edad"
+            required
+          />
+          <label class="mt-3" for="nombreCompleto">Carrera: *</label>
+          <input
+            type="text"
+            formControlName="carrera"
+            class="form-control"
+            id="nombreCompleto"
+            maxlength="128"
+            style="width: 300px"
+            placeholder="Ingrese su carrera"
+            required
+          />
+          <h2 class="mt-2 text-center">Sección 1: Fundamentos de Programación</h2>
+          <p><strong>Pregunta 1: </strong> {{ pregunta1 }}</p>
+          <select
+            id="respuesta1"
+            formControlName="respuesta1"
+            class="form-control border border-primary"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Un lenguaje de programación.</option>
+            <option value="1">
+              b) Un conjunto de reglas para resolver un problema.
+            </option>
+            <option value="0">c) Una variable numérica.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 2: </strong> {{ pregunta2 }}</p>
+          <select
+            id="pregunta1"
+            formControlName="respuesta2"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Un valor constante.</option>
+            <option value="0">b) Una función predefinida.</option>
+            <option value="1">
+              c) Un contenedor para almacenar información.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 3: </strong>{{ pregunta3 }}</p>
+          <select
+          formControlName="respuesta3"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">
+              a) Las listas son inmutables, y las tuplas son mutables.
+            </option>
+            <option value="1">
+              b) Las listas son ordenadas, y las tuplas no.
+            </option>
+            <option value="0">
+              c) Las listas pueden contener diferentes tipos de datos, y las
+              tuplas no.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 4: </strong> {{ pregunta4 }}</p>
+          <select
+          formControlName="respuesta4"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="1">
+              a) La región del código donde la variable se puede utilizar.
+            </option>
+            <option value="0">b) El nombre asignado a una variable.</option>
+            <option value="0">
+              c) La cantidad de memoria que ocupa una variable.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 5: </strong> {{ pregunta5 }}</p>
+          <select
+          formControlName="respuesta5"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Imprime los números del 1 al 5.</option>
+            <option value="1">b) Imprime los números del 0 al 4.</option>
+            <option value="0">c) Genera un error de sintaxis.</option>
+          </select>
+          <h2 class="text-center mt-3">Sección 2: Estructuras de Control</h2>
+          <p class="mt-3"><strong>Pregunta 6: </strong> {{ pregunta6 }}</p>
+          <select
+          formControlName="respuesta6"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Bucle condicional.</option>
+            <option value="0">b) Bucle for.</option>
+            <option value="1">c) Bucle while.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 7: </strong> {{ pregunta7 }}</p>
+          <select
+          formControlName="respuesta7"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Iterar sobre una lista.</option>
+            <option value="1">
+              b) Ejecutar un bloque de código si se cumple una condición, y otro
+              si no se cumple.
+            </option>
+            <option value="0">c) Definir una función.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 8: </strong> {{ pregunta8 }}</p>
+          <select
+          formControlName="respuesta8"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">
+              a) Una variable que se modifica en cada iteración.
+            </option>
+            <option value="0">b) Un bucle que se ejecuta infinitamente.</option>
+            <option value="1">c) Una función que se llama a sí misma.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 9: </strong> {{ pregunta9 }}</p>
+          <select
+          formControlName="respuesta9"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) No es posible evitar bucles infinitos.</option>
+            <option value="0">b) Usando la instrucción break.</option>
+            <option value="1">
+              c) Garantizando que la condición del bucle eventualmente sea
+              falsa.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 10: </strong> {{ pregunta10 }}</p>
+          <select
+          formControlName="respuesta10"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="1">
+              a) La posición de un elemento en la lista.
+            </option>
+            <option value="0">b) La longitud total de la lista.</option>
+            <option value="0">c) El tipo de datos de la lista.</option>
+          </select>
+          <h3 class="text-center mt-3">Sección 3: Conceptos Avanzados</h3>
+          <p class="mt-3"><strong>Pregunta 11: </strong> {{ pregunta11 }}</p>
+          <select
+          formControlName="respuesta11"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="1">
+              a) La capacidad de una clase para heredar propiedades y métodos de
+              otra clase.
+            </option>
+            <option value="0">b) La duplicación de una clase.</option>
+            <option value="0">c) La eliminación de una clase.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 12: </strong> {{ pregunta12 }}</p>
+          <select
+          formControlName="respuesta12"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">a) Detener la ejecución del programa.</option>
+            <option value="1">
+              b) Manejar situaciones excepcionales y errores.
+            </option>
+            <option value="0">c) Mejorar el rendimiento del programa.</option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 13: </strong> {{ pregunta13 }}</p>
+          <select
+          formControlName="respuesta13"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="0">
+              a) Una herramienta de optimización de código.
+            </option>
+            <option value="0">b) Un lenguaje de programación.</option>
+            <option value="1">
+              c) Un modelo de programación orientado a objetos.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 14: </strong> {{ pregunta14 }}</p>
+          <select
+          formControlName="respuesta14"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="1">
+              a) Un estilo de programación que se centra en la manipulación de
+              funciones matemáticas.
+            </option>
+            <option value="0">
+              b) Un paradigma de programación que se basa en la modificación de
+              variables globales.
+            </option>
+            <option value="0">
+              c) Un enfoque que evita el uso de funciones en el código.
+            </option>
+          </select>
+          <p class="mt-3"><strong>Pregunta 15: </strong> {{ pregunta15 }}</p>
+          <select
+          formControlName="respuesta15"
+            class="me-3 form-control border border-success"
+            style="width: 300px; position: relative; left: 100px"
+            required
+          >
+            <option value="" disabled>--Seleciona una opción--</option>
+            <option value="1">
+              a) La llave primaria es única para cada fila, mientras que la
+              llave foránea puede repetirse.
+            </option>
+            <option value="0">
+              b) La llave primaria no puede ser modificada, pero la llave
+              foránea puede.
+            </option>
+            <option value="0">
+              c) No hay diferencia, ambos términos se refieren a lo mismo.
+            </option>
+          </select>
+          <button
+            type="submit"
+            id="form-submit"
+            class="p-4 mt-5 main-button btn btn-primary"
+          >
+            Enviar test
+          </button>
+        </form>
+      </div>
+      <br /><br /><br />
+      <p>
+        <strong>Aviso de privacidad:</strong> Esta pregunta puede ayudar a
+        determinar si los estudiantes están interesados en roles que involucran
+        la gestión y protección de datos personales y la privacidad en el
+        desarrollo de software.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<app-navbar-user></app-navbar-user>
+
+<div class="container-fluid mt-2">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/test"> Test de rol </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Test de nivel fronend </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Test de nivel backend </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Guia de estudio </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Backend </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">
+              Recomendaciones de redes sociales
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Aquí coloca el contenido principal de tu página -->
+     
+      <div class="container">
+      
+        <div *ngFor="let test of listaTest; last as isLast">
+          <ng-container *ngIf="isLast">
+            <h1 class="text-center">Datos de la encuesta</h1>
+            <p><strong> Nombre:</strong> {{ test.nombre }}</p>
+            <p><strong>Edad: </strong>{{ test.edad }}</p>
+            <p><strong>Carrera: </strong>{{ test.carrera }}</p>
+            <p><strong>Puntaje final final: </strong> {{ sumaRespuestas }}/15</p>
+            <p class="text-center"><strong>Resultado final: </strong></p> 
+            <h2 class="text-{{color}} text-center">{{nivel}}</h2>
+          </ng-container>
+        </div>
+        <br><br><br>
+        <div>
+          <h4 class="text-center mt-4">
+            Recomendaciones
+          </h4>
+          <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Tarjeta 1 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="../assets/img/frontend.jpeg" class="card-img-top w-90 h-90" alt="Imagen 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Desarrollador Front end</h5>
+                            <p class="card-text">Información de que hace un desarrollador front-end...</p>
+                            <button routerLink="/frontend" class="btn btn-primary">Visualizar</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Tarjeta 2 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="../assets/img/backend.png" class="card-img-top" style="height: 220px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Desarrollador Back end</h5>
+                            <p class="card-text">Información de que hace un desarrollador back-end...</p>
+                            <button routerLink="/backend" class="btn btn-primary">Visualizar</button>
+  
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Tarjeta 3 -->
+                <div class="col">
+                    <div class="card">
+                        <img src="../assets/img/comunidades.webp" style="height: 220px;" class="card-img-top" alt="Imagen 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Comunidades y eventos</h5>
+                            <p class="card-text">Unete a las comunidades y eventos de programación...</p>
+                            <button routerLink="/comunidades" class="btn btn-primary">Visualizar</button>
+  
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<footer class="bg-dark text-light text-center p-3">
+  <p>&copy; 2023 GuiaDevs. Todos los derechos reservados.</p>
+</footer>
