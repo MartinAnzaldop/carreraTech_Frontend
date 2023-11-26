@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { UsersModule } from './users/users.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule }from '@angular/common/http';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -19,6 +20,7 @@ import{HttpClientModule }from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     UsersModule,
+    AdminModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,

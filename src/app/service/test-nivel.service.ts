@@ -7,7 +7,7 @@ import { TESTROL } from '../models/testRol';
   providedIn: 'root'
 })
 export class TestNivelService {
-  url = 'http://localhost:3000/api/test';
+  url = 'http://localhost:3000/api/test/';
 
   constructor(private http: HttpClient) { }
 
@@ -16,5 +16,9 @@ export class TestNivelService {
   }
   getTest():Observable<any>{
     return this.http.get(this.url);
+  }
+
+  deleteTest(id:any):Observable<any>{
+    return this.http.delete(this.url+id);
   }
 }

@@ -1,0 +1,61 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="container-fluid mt-2">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/test"> Comentarios </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Listas de test </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Estadisticas de test </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        
+    <!-- Contenido principal -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Aquí coloca el contenido principal de tu página -->
+      <h1 class="text-center mt-3">Bienvenido administrador</h1>
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+      
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/frontend.jpeg" class="card-img-top " style="height: 300px;" alt="Imagen 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Listado de test</h5>
+                        <p class="card-text">Visualiza los test asi como sus estaditicas</p> <br>
+                        <button routerLink="/listaEncuestas" class="btn btn-primary">Visualizar</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="../assets/img/backend.png" class="card-img-top" style="height: 300px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Comentarios de usuarios</h5>
+                        <p class="card-text">Visualiza los comentarios de los usuarios...</p><br>
+                        <button routerLink="/" class="btn btn-primary">Visualizar</button>
+
+                    </div>
+                </div>
+            </div>
+      
+        </div>
+      </div>
+    </main>
+  </div>
+</div> <br><br><br>
+<footer class="bg-dark text-light text-center p-3">
+    <p>&copy; 2023 GuiaDevs. Todos los derechos reservados.</p>
+  </footer>
