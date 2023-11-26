@@ -10,7 +10,7 @@ const routes: Routes = [
      { path: 'inicioAdmin', component: InicioAdminComponent },
      { path: 'listaEncuestas', component: ListaEncuestasComponent },
      { path: 'navbarAdmin', component: NavbarAdminComponent },
-     { path: 'estaditicasEncuestas', component: EstadisticasEncuestasComponent },
+     { path: 'estadisticas/:id', component: EstadisticasEncuestasComponent },
 ];
 
 @NgModule({

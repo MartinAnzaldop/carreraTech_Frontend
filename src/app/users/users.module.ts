@@ -13,6 +13,12 @@ import { GuiasEstudioComponent } from './guias-estudio/guias-estudio.component';
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import {AngularFireModule} from "@angular/fire/compat"
+import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -28,7 +34,9 @@ import { ResultadoComponent } from './resultado/resultado.component';
     ComunidadesComponent,
     GuiasEstudioComponent,
     RecomendacionesComponent,
-    ResultadoComponent
+    ResultadoComponent,
+    RegisterComponent,
+    LoginComponent
     
     
   ],
@@ -36,6 +44,9 @@ import { ResultadoComponent } from './resultado/resultado.component';
     CommonModule, 
     RouterModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(), 
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     
   ]
 })

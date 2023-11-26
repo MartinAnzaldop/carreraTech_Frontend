@@ -1,5 +1,6 @@
 export class TESTROL{
     _id?: number;
+    usuario: string='';
     nombre: string='';
     edad: number=0;
     carrera: string='';

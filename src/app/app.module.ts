@@ -6,6 +6,9 @@ import { UsersModule } from './users/users.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule }from '@angular/common/http';
 import { AdminModule } from './admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -13,6 +16,7 @@ import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
+   
     
     
   ],
@@ -24,6 +28,7 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
     
     
   ],

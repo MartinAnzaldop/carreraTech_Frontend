@@ -7,7 +7,10 @@ import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
 import { ListaEncuestasComponent } from './lista-encuestas/lista-encuestas.component';
 import { EstadisticasEncuestasComponent } from './estadisticas-encuestas/estadisticas-encuestas.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -17,6 +20,7 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
     ListaEncuestasComponent,
     EstadisticasEncuestasComponent,
     NavbarAdminComponent
+    
   
     
     
@@ -25,6 +29,9 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
     CommonModule, 
     RouterModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(), 
+    AngularFireModule.initializeApp(environment.firebaseConfig),
    
     
   ]

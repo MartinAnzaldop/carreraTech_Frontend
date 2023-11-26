@@ -1,1 +1,92 @@
-<p>estadisticas-encuestas works!</p>
+<app-navbar-admin></app-navbar-admin>
+<div class="container">
+  <div class="container mt-3">
+    <h1 class="text-center">Estaditicas</h1>
+    <p>
+      En esta sección, se presentan las estadísticas detalladas de los
+      resultados obtenidos en el test, desglosados por pregunta para ofrecer una
+      visión precisa del desempeño individual en cada ítem. Cada pregunta se
+      analiza en función de la cantidad de aciertos registrados:
+    </p>
+    <h2>Total de registros: {{ listaTest.length }}</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Preguntas</th>
+            <th>Respuestas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ pregunta1 }}</td>
+            <td class="text-center sub">{{ res1 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta2 }}</td>
+            <td class="text-center sub">{{ res2 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta3 }}</td>
+            <td class="text-center sub">{{ res3 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta4 }}</td>
+            <td class="text-center sub">{{ res4 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta5 }}</td>
+            <td class="text-center sub">{{ res5 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta6 }}</td>
+            <td class="text-center sub">{{ res6 }}/{{ listaTest.length }}</td>
+
+          </tr>
+          <tr>
+            <td>{{ pregunta7 }}</td>
+            <td class="text-center sub">{{ res7 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta8 }}</td>
+            <td class="text-center sub">{{ res8 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta9 }}</td>
+            <td class="text-center sub">{{ res9 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta10 }}</td>
+            <td class="text-center sub">{{ res10 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta11 }}</td>
+            <td class="text-center sub">{{ res11 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta12 }}</td>
+            <td class="text-center sub">{{ res12 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta13 }}</td>
+            <td class="text-center sub">{{ res13 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta14 }}</td>
+            <td class="text-center sub">{{ res14 }}/{{ listaTest.length }}</td>
+          </tr>
+          <tr>
+            <td>{{ pregunta15 }}</td>
+            <td class="text-center sub">{{ res15 }}/{{ listaTest.length }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+      
+      <br>
+    </div>
+  </div>
+</div>
+<footer class="bg-dark text-light text-center p-3">
+    <p>&copy; 2023 GuiaDevs. Todos los derechos reservados.</p>
+  </footer>

@@ -9,6 +9,8 @@ import { ComunidadesComponent } from './comunidades/comunidades.component';
 import { GuiasEstudioComponent } from './guias-estudio/guias-estudio.component';
 import { RecomendacionesComponent } from './recomendaciones/recomendaciones.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
      { path: 'inicio', component: InicioComponent },
@@ -20,6 +22,8 @@ const routes: Routes = [
      { path: 'guias', component: GuiasEstudioComponent },
      { path: 'recomendaciones', component: RecomendacionesComponent },
      { path: 'resultado', component: ResultadoComponent },
+     { path: 'register', component: RegisterComponent },
+     { path: 'login', component: LoginComponent },
 
 
 ];

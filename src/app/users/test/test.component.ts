@@ -13,6 +13,8 @@ import { TestNivelService } from 'src/app/service/test-nivel.service';
 })
 export class TestComponent implements OnInit {
   testForm:FormGroup;
+  usuario="";
+  datoGuardado=""
  nombre: string='';
     edad: number=0;
     carrera: string='';
@@ -49,8 +51,9 @@ export class TestComponent implements OnInit {
 
 
   constructor(private fb: FormBuilder, private  router: Router,
-   private aRouter: ActivatedRoute, private _Test: TestNivelService) { 
+   private aRouter: ActivatedRoute, private _Test: TestNivelService, private  toastr: ToastrService) { 
     this.testForm=this.fb.group({
+      usuario:['', Validators.required],
       nombre:['', Validators.required],
       edad:['', Validators.required],
       carrera:['', Validators.required],
@@ -92,7 +95,13 @@ export class TestComponent implements OnInit {
 
 
   agregarTest(){
+    const emailData = localStorage.getItem('email');
+      if (emailData) {
+        this.datoGuardado = JSON.parse(emailData);
+        
     const TESTROL: TESTROL ={
+      usuario: this.datoGuardado,
+        
       nombre: this.testForm.get('nombre')?.value,
       edad: this.testForm.get('edad')?.value,
       carrera: this.testForm.get('carrera')?.value,
@@ -128,6 +137,7 @@ export class TestComponent implements OnInit {
       respuesta15: this.testForm.get('respuesta15')?.value,
     }
     this._Test.guardarTest(TESTROL).subscribe(dato=>{
+      this.toastr.success('Test contestado')
       this.router.navigate(['/resultado'])
     }, error=>{
     console.log(error);
@@ -135,4 +145,5 @@ export class TestComponent implements OnInit {
     })
     
     }
+}
 }

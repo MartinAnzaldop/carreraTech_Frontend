@@ -42,7 +42,7 @@
               <td>{{test.edad}}</td>
               <td>{{test.carrera}}</td>
               <td>
-                <button  routerLink="/estaditicasEncuestas" type="button" class="btn mt-2 btn-success me-3">Estadisticas</button>              
+                <button [routerLink]="['/estadisticas', test._id]" type="button" class="btn mt-2 btn-success me-3">Estadisticas</button>              
 
                 <button (click)="eliminarTest(test._id)" type="button" class="btn mt-2 btn-danger">eliminar</button>              </td>
             </tr>
@@ -50,3 +50,4 @@
           </tbody>
         </table>
       </div>
+      
