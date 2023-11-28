@@ -386,112 +386,45 @@
 </div>
 <!-- Team End -->
 
-<!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-  <div class="container">
-    <div class="text-center">
-      <h6 class="section-title bg-white text-center text-primary px-3">
-        Testimonios
-      </h6>
-      <h1 class="mb-5">Los usuarios dicen</h1>
-    </div>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-item text-center">
-            <img
-              class="  p-2 mx-auto mb-3"
-              src="../assets/img/testimonial-2.jpg"
-              style="width: 350px; height: 300px"
-              alt="Client 1"
-            />
-            <h5 class="mb-0">Celeste Jimenes</h5>
-            <p>Ingeniero en sistemas inteligentes</p>
-            <div class="testimonial-text bg-light text-center p-4">
-              <p class="mb-0">
-                El sistemas de CarreraTech me ayudó a conocer mi perfil 
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-item text-center">
-            <img 
-              class="  p-2 mx-auto mb-3"
-              src="../assets/img/testimonial-2.jpg"
-              style="width: 350px; height: 300px"
-              alt="Client 2"
-            />
-            <h5 class="mb-0">Dan Ramirez</h5>
-            <p>TSU en desarrollo de software</p>
-            <div class="testimonial-text bg-light text-center p-4">
-              <p class="mb-0">
-              No conocia los roles en el desarrollo de software, gracias a CarreraTech pude conocerlos
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-item text-center">
-            <img
-              class=" p-2 mx-auto mb-3"
-              src="../assets/img/testimonial-3.jpg"
-              style="width: 350px; height: 300px"
-              alt="Client 3"
-            />
-            <h5 class="mb-0">Juan Tevez</h5>
-            <p>Estudiante de desarrollo de software</p>
-            <div class="testimonial-text bg-light text-center p-4">
-              <p class="mb-0">
-                Esta aplicación me ayudó a conocer mi perfil y a conocer los lenguajes de programación
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-item text-center">
-            <img
-              class=" p-2 mx-auto mb-3"
-              src="../assets/img/testimonial-4.jpg"
-              style="width: 350px; height: 300px"
-              alt="Client 4"
-            />
-            <h5 class="mb-0">Paola Perez</h5>
-            <p>Estudiantes de desarrollo de software</p>
-            <div class="testimonial-text bg-light text-center p-4">
-              <p class="mb-0">
-                Esta aplicación me ayudó a conocer mi perfil y a conocer los lenguajes de programación
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="prev"
-        style="background-color: #000; width: 22opx;"
+
+<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+  <h6 class="section-title bg-white text-center text-primary px-3">
+    Testimonios
+  </h6>
+  <h1 class="mb-5">Mensajes de nuestros usuarios</h1>
+</div>
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let comentario of listaComentario; let i = index" [class.active]="i === 0">
+      <!-- Imagen menos relevante (puede ser un avatar genérico) -->
+      <div >
+      <img src="../assets/img/comentario.jpg"  class="d-block mx-auto " alt="Avatar" style="width: 1200px; height: 150px; object-fit: cover;">
+      
+      <!-- Contenido del testimonio -->
+      <div class="carousel-caption text-center"  >
+        <h2 class="lead text-light">{{comentario.mensaje}}</h2>
+        <h3 class="font-weight-bold text-light">- {{comentario.nombre}}</h3>
         
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden" >Previous</span>
-      </button>
-      <button 
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#testimonialCarousel"
-        data-bs-slide="next"
-        style="background-color: #000;"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      </div>
     </div>
   </div>
 </div>
+  <!-- Controles del carousel -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
-<!-- Testimonial End -->
+
+
+
+
+
 
 <div class="container-xxl py-5">
   <div class="container">

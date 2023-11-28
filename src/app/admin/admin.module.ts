@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { ListaMensajeComponent } from './lista-mensaje/lista-mensaje.component';
 
 
 
@@ -19,7 +20,8 @@ import { environment } from 'src/environments/environment';
     InicioAdminComponent,
     ListaEncuestasComponent,
     EstadisticasEncuestasComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    ListaMensajeComponent
     
   
     

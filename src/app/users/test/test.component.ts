@@ -47,7 +47,7 @@ export class TestComponent implements OnInit {
     respuesta12:number=0;
     respuesta13:number=0;
     respuesta14:number=0;
-    respuesta15:number=0;
+    respuesta15:number=0;  
 
 
   constructor(private fb: FormBuilder, private  router: Router,

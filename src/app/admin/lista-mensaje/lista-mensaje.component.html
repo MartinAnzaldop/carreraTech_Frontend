@@ -1,0 +1,55 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="container-fluid mt-2">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/test"> Comentarios </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Listas de test </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"> Estadisticas de test </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        
+    <!-- Contenido principal -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Aquí coloca el contenido principal de tu página -->
+      <h1 class="text-center mt-3">Comentarios
+      </h1>
+      <div class="container mt-3">
+        <h2>Listado de comentarios</h2>
+              
+        <table class="table table-bordered">
+          <thead>
+            <tr class="text-center">
+              <th>Usuario</th>
+              <th>Asunto</th>
+              <th>Estatus</th>
+              <th>Mensaje</th>
+              <th>Accion</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let comentario of listaComentario">
+            <tr class="text-center">
+              <td>{{comentario.usuario}}</td>
+              <td>{{comentario.asunto}}</td>
+              <td>{{comentario.estatus}}</td>
+              <td>{{comentario.mensaje}}</td>
+
+              <td>
+                <button (click)="modificarEstatus(comentario._id)" type="button" class="btn me-2 btn-warning" >Estatus</button>
+                <button (click)="eliminarComentario(comentario._id)" type="button" class="btn  btn-danger">eliminar</button>              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+      

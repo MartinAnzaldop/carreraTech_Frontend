@@ -19,6 +19,7 @@ import {AngularFireModule} from "@angular/fire/compat"
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ComentarioComponent } from './comentario/comentario.component';
 
 
 
@@ -36,7 +37,8 @@ import { ToastrModule } from 'ngx-toastr';
     RecomendacionesComponent,
     ResultadoComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ComentarioComponent
     
     
   ],

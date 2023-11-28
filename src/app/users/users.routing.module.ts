@@ -11,6 +11,7 @@ import { RecomendacionesComponent } from './recomendaciones/recomendaciones.comp
 import { ResultadoComponent } from './resultado/resultado.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { ComentarioComponent } from './comentario/comentario.component';
 
 const routes: Routes = [
      { path: 'inicio', component: InicioComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
      { path: 'resultado', component: ResultadoComponent },
      { path: 'register', component: RegisterComponent },
      { path: 'login', component: LoginComponent },
+     { path: 'comentario', component: ComentarioComponent },
 
 
 ];
