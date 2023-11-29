@@ -5,6 +5,7 @@ import { ListaEncuestasComponent } from './lista-encuestas/lista-encuestas.compo
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { EstadisticasEncuestasComponent } from './estadisticas-encuestas/estadisticas-encuestas.component';
 import { ListaMensajeComponent } from './lista-mensaje/lista-mensaje.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
      { path: 'navbarAdmin', component: NavbarAdminComponent },
      { path: 'estadisticas/:id', component: EstadisticasEncuestasComponent },
      { path: 'listaMensajes', component: ListaMensajeComponent },
+     { path: 'loginAdmin', component: LoginAdminComponent },
 ];
 
 @NgModule({

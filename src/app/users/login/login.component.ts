@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
       console.log(user);
       if(user.user?.emailVerified){
         localStorage.setItem('email', JSON.stringify(email));
+        this.toastr.success('Bienvenido');
           this.router.navigate(['/dashboard']);
       }else {
         this.router.navigate(['/verificacionCorreo']);

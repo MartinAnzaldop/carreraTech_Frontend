@@ -12,6 +12,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { ListaMensajeComponent } from './lista-mensaje/lista-mensaje.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { UsersModule } from '../users/users.module';
+import { NavbarComponent } from '../users/navbar/navbar.component';
+
 
 
 
@@ -21,7 +25,10 @@ import { ListaMensajeComponent } from './lista-mensaje/lista-mensaje.component';
     ListaEncuestasComponent,
     EstadisticasEncuestasComponent,
     NavbarAdminComponent,
-    ListaMensajeComponent
+    ListaMensajeComponent,
+    LoginAdminComponent,
+    
+  
     
   
     
@@ -34,6 +41,7 @@ import { ListaMensajeComponent } from './lista-mensaje/lista-mensaje.component';
     BrowserAnimationsModule, 
     ToastrModule.forRoot(), 
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    UsersModule,
    
     
   ]
